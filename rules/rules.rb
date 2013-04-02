@@ -133,7 +133,7 @@ CONTENT
   move_down(10)
   list([
     "Gather upgrades in piles by type (<i>Armor</i>, <i>Crew</i>, <i>Mining</i>).",
-    "Set aside one of each starting resource (<i>Copper</i>, <i>Silver</i>, <i>Gold</i>, <i>Platinum</i>).",
+    "Set aside two <i>Copper</i>, and three <i>Silver</i>.",
     "Shuffle remaining resources and form a draw pile near the asteroids.",
     "Shuffle contracts to form a draw pile.",
     "Deal the inital two available contracts face up.",
@@ -147,7 +147,10 @@ CONTENT
     "Place two <i>Crew</i> cards in front of you to indicate how many crew disks you may use each round.",
     "Place one <i>Mining</i> card in front of you to indicate how many resources to draw when mining.",
     "The person who has spent the least time on Earth may take the first player rocket.",
-    "Take a starting resource: first player gets <i>Copper</i>, second <i>Silver</i>, third <i>Gold</i> and fourth <i>Platinum</i>.",
+    "The first player should take one <i>Copper</i> from those set aside during setup.",
+    "The second player should take one <i>Silver</i> from those set aside during setup.",
+    "The third player should take one <i>Copper</i>, and one <i>Silver</i> from those set aside during setup.",
+    "The fourth player should take two <i>Silver</i> from those set aside during setup."
   ])
 
   header("Rounds")
