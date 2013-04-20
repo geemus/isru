@@ -213,11 +213,15 @@ EXAMPLE
 Contracts get resources to people who'll pay good for 'em, but miss too many deliveries and you'll be outta business.
 CONTENT
   list([
-    "Face up, fulfilled contracts add to your score. Face down, reserved contracts substract from your score.",
-    "Draw either the top 3 face down contracts or the top 2 face up, discarded contract, if there are any.",
-    "If there are not enough cards to draw the full amount, just draw as many as possible.",
+    "Your score increases by the amount listed on face up, fulfilled contracts.",
+    "Choose contracts and draw:",
+    [
+      "As long as contracts remain in the draw pile, you may choose to draw 3.",
+      "As long as there are contracts in the discard pile, you may choose to draw 2."
+    ],
     "From the drawn contracts, choose at least one to add to your hand of reserved contracts.",
-    "Place your crew disk on top of the contracts, preventing others from taking contracts this turn.",
+    "If there is only one contract in the discard pile, you may choose to draw and keep it.",
+    "Be careful, when the game ends remaining reserved contracts reduce your score."
   ])
   example <<-EXAMPLE
 As there are no face down contracts yet, Morgan chooses to draw 3 face down contracts. He draws <i>CS</i>, <i>GG</i>, and <i>SSS</i>. He decides that since it is still early in the game, he keeps <i>SSS</i> as it is worth the most points, in the hopes that he can complete it by game end. He decides he would rather not take too many contracts at once though, so he discards <i>CS</i> and <i>GG</i>. Finally he places a crew disk on the contract draw pile.
@@ -230,8 +234,12 @@ EXAMPLE
 Promises are well and good, but no rest for the wicked; least not until you deliver.
 CONTENT
   list([
-    "You may discard matching resources and place a crew disc on one of your reserved contracts to fulfill it.",
-    "Fulfilling the conract increases your score when the game ends, while unfulfilled contracts descrease it."
+    "Reveal one of your reserved contracts and pay the matching resources to place your crew disk on it.",
+    "When the game ends your score will be:",
+    [
+      "Increased by the total amount shown on your fulfilled contracts.",
+      "Decreased by the total amount on your remaining reserved contracts."
+    ]
   ])
   example <<-EXAMPLE
 Teresa previously drew <i>SG</i> from the discarded contracts. As she has both <i>Silver</i> and <i>Gold</i>, she chooses to fulfill this contract with her next action. She reveals the contract, discards the matching resources and places a crew disk on it. When the game ends she will now have that many more points.
