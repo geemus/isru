@@ -118,7 +118,8 @@ CONTENT
       "<b>Actions</b>: Players take turns placing crew disks to take actions.",
       [
         "<b>Asteroids</b>: Take a chance to gain resources.",
-        "<b>Contracts</b>: Trade resources for points.",
+        "<b>Reserve Contracts</b>: Get more options of contracts to fulfill for points.",
+        "<b>Fulfill Contracts</b>: Trade resources for points.",
         "<b>Pass</b>: Avoid risk or expense but get no more actions for the round.",
         "<b>Upgrades</b>: Trade resources for improved capabilities."
       ],
@@ -136,7 +137,6 @@ CONTENT
     "Set aside two <i>Copper</i>, and three <i>Silver</i>.",
     "Shuffle remaining resources and form a draw pile near the asteroids.",
     "Shuffle contracts to form a draw pile.",
-    "Deal the inital two available contracts face up.",
     "Arrange the asteroids by their number from lowest to highest."
   ])
 
@@ -150,7 +150,8 @@ CONTENT
     "The first player should take one <i>Copper</i> from those set aside during setup.",
     "The second player should take one <i>Silver</i> from those set aside during setup.",
     "The third player should take one <i>Copper</i>, and one <i>Silver</i> from those set aside during setup.",
-    "The fourth player should take two <i>Silver</i> from those set aside during setup."
+    "The fourth player should take two <i>Silver</i> from those set aside during setup.",
+    "Draw three contract cards and choose at least one to keep."
   ])
 
   header("Rounds")
@@ -162,20 +163,20 @@ CONTENT
 
   subheader("Refresh")
   list([
-    "All players collect their used crew tokens as well as any claimed upgrades.",
+    "If no player chose to draw contracts, discard the top three face up next to the contract draw pile.",
+    "All players collect their used crew tokens and any claimed upgrades.",
     "Pass the first player rocket to the next player in clockwise order.",
-    "The new first player reveals two new contract cards, if no contracts can be drawn, the game ends.",
     "Place these contracts face up, on top of previous contracts (or where previous contracts had been)."
   ])
 
   subheader("Game End")
   paragraph <<-CONTENT
-If no contracts remain during <b>Refresh</b>, the game ends and scoring begins.
+The game ends on the turn in which there are no contracts left in the draw pile, regardless of whether they were drawn or discarded.
 CONTENT
 
   subheader("Scoring")
   paragraph <<-CONTENT
-Players add the values of their fulfilled contracts and remaining resources together and then subtract reserved contracts to get their final score. The player with the highest score is the winner. In the event of a tie, play again in a new asteroid field!
+Players add the values of their fulfilled contracts and remaining resources together and subtract reserved contracts still in their hand to get their final score. The player with the highest score is the winner. In the event of a tie, play again in a new asteroid field!
 CONTENT
   paragraph <<-CONTENT
 <b>Final Score</b> = <i>resources</i> + <i>fulfilled contracts</i> - <i>reserved contracts</i>
@@ -207,23 +208,33 @@ David got the platinum, so he will go first. He decides to mine and places one o
 Susan got gold and so she will go second. She also decides to mine and places one crew disk on the next asteroid space, which has the number 3. She rolls a 3, which does not beat the number. Armor would add one to her roll for each upgrade, but she has none. She crashes, placing her remaining crew disk on the next available spot and discarding her gold. This ends her turn and she will have to wait to reclaim her crew disks during <i>Refresh</i> before she will be able to take additional actions.
 EXAMPLE
 
-  subheader("Contracts")
+  subheader("Reserve Contracts")
   flavor <<-CONTENT
 Contracts get resources to people who'll pay good for 'em, but miss too many deliveries and you'll be outta business.
 CONTENT
   list([
-    "When the game ends, face up contracts add to, and face down contracts substract from your score.",
-    "Take the chosen contract and place it in front of you with crew disk on top, either:",
-    [
-      "Face up: discard matching resources to fulfill the contract and increase your score.",
-      "Face down: reserve without fulfilling or discarding resources."
-    ],
-    "Reserved contracts may be flipped face up and fulfilled on later turns by discarding the resources and placing a crew disk."
+    "Face up, fulfilled contracts add to your score. Face down, reserved contracts substract from your score.",
+    "Draw either the top 3 face down contracts or the top 2 face up, discarded contract, if there are any.",
+    "If there are not enough cards to draw the full amount, just draw as many as possible.",
+    "From the drawn contracts, choose at least one to add to your hand of reserved contracts.",
+    "Place your crew disk on top of the contracts, preventing others from taking contracts this turn.",
   ])
   example <<-EXAMPLE
-Morgan sees that one of the contracts is Three Silver worth 18 points. Although he does not have the resources yet he decides that it is early enough in the game to take the risk since it is worth so many points. He takes the contract in front of him face down and places a crew disk on it. He hopes that before the end of the game he will have the three silver required and be able to discard them and play a crew disk to flip the contract over and fulfill it for its full value.
+As there are no face down contracts yet, Morgan chooses to draw 3 face down contracts. He draws <i>CS</i>, <i>GG</i>, and <i>SSS</i>. He decides that since it is still early in the game, he keeps <i>SSS</i> as it is worth the most points, in the hopes that he can complete it by game end. He decides he would rather not take too many contracts at once though, so he discards <i>CS</i> and <i>GG</i>. Finally he places a crew disk on the contract draw pile.
 
-Teresa sees that the Silver ond Gold contract matches resources that she has drawn from earlier actions. She discards a Silver and a Gold to place the contract in front of her face up with a crew disk on it, gaining 8 points.
+Teresa would like to get the <i>SG</i> contract, but must wait until the following turn when contracts are once again available. When her turn comes up she chooses contracts and draws the two face up cards, <i>CS</i> and <i>GG</i> which Morgan discarded. She keeps <i>CS</i>, discards <i>GG</i>, and places her crew disk on the contract discard pile.
+EXAMPLE
+
+  subheader("Fulfill Contracts")
+  flavor <<-CONTENT
+Promises are well and good, but no rest for the wicked; least not until you deliver.
+CONTENT
+  list([
+    "You may discard matching resources and place a crew disc on one of your reserved contracts to fulfill it.",
+    "Fulfilling the conract increases your score when the game ends, while unfulfilled contracts descrease it."
+  ])
+  example <<-EXAMPLE
+Teresa previously drew <i>SG</i> from the discarded contracts. As she has both <i>Silver</i> and <i>Gold</i>, she chooses to fulfill this contract with her next action. She reveals the contract, discards the matching resources and places a crew disk on it. When the game ends she will now have that many more points.
 EXAMPLE
 
   subheader("Lounge")
