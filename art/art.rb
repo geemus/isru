@@ -122,7 +122,7 @@ def card_back_circle(label, location)
   flip_flop = text.dup.flip!.flop!
   texts = text.composite(flip_flop, 0, 0, Magick::SrcOverCompositeOp)
 
-  composite = card(BASE03).composite(texts, 0, 0, Magick::SrcOverCompositeOp)
+  composite = card.composite(texts, 0, 0, Magick::SrcOverCompositeOp)
 
   circles(composite, 1)
 

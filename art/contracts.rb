@@ -12,27 +12,29 @@ require File.expand_path(File.join(DIRECTORY, 'art'))
 
 # Faces
 
-contracts = {
-  "CS"    => 10,
-  "SG"    => 14,
-  "SP"    => 18,
-  "CGP"   => 19,
-  "SGP"   => 20,
-  "GG"    => 21,
-  "CCC"   => 22,
-  "SSS"   => 26,
-  "CCCC"  => 30
+{
+  "Copper + Silver"           => 10,
+  "Silver + Gold"             => 14,
+  "Silver + Platinum"         => 18,
+  "Copper + Gold + Platinum"  => 19,
+  "Silver + Gold + Platinum"  => 20,
+  "Two Gold"                  => 21,
+  "Three Copper"              => 22,
+  "Three Silver"              => 26,
+  "Four Copper"               => 30
 }.each do |type,value|
   text = card('transparent')
 
   draw = Magick::Draw.new
   draw.annotate(text, 0,0, PADDING, PADDING, type) do
     shared_text_settings(self)
+    self.pointsize  = 60
     self.rotation   = 90
   end
   draw.annotate(text, 0,0, PADDING, HEIGHT - PADDING, value.to_s) do
     shared_text_settings(self)
     self.align      = Magick::RightAlign
+    self.pointsize  = 60
     self.rotation   = 90
   end
 
@@ -42,7 +44,7 @@ contracts = {
   circles(texts, 1)
 
   composite = card.composite(texts, 0, 0, Magick::SrcOverCompositeOp)
-  composite.write("#{DIRECTORY}/../assets/contracts/#{type.gsub(' ', '_')}_#{value}.png")
+  composite.write("#{DIRECTORY}/../assets/contracts/#{type.gsub(' ', '')}_#{value}.png")
 end
 
 # Back
