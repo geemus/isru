@@ -164,7 +164,7 @@ CONTENT
   subheader("Refresh")
   list([
     "If the contracts do not have a crew disk on them, discard the next three face up.",
-    "All players collect their used crew tokens and any claimed upgrades.",
+    "All players recollect their crew tokens.",
     "Pass the first player rocket to the next player in clockwise order.",
   ])
 
@@ -257,26 +257,26 @@ EXAMPLE
 That hunk-a-junk might get you out and back, but you best visit the mechanics if you wanna be major league.
 CONTENT
   list([
-    "There are several available upgrades, each providing a different bonus on subsequent turns.",
+    "There are several available upgrades, each providing a different bonus.",
     [
       "<i>Armor</i>:   Add one to your asteroids die roll for each armor upgrade card.",
       "<i>Crew</i>:    Use one crew disks each round for each crew upgrade card.",
       "<i>Mining</i>:  Draw one resource for each mining upgrade card when asteroids roll succeeds."
     ],
-    "Pay the cost on the upgrade card to place your crew disk on it.",
+    "Pay the cost on the upgrade card to collect it and place your crew disk on it.",
     "Costs are for the first, second, third, and forth upgrade of this type that you purchase.",
     "You may pay by discarding any combination of resources from your hand, but recieve no change.",
-    "Upgrades are collected in between rounds, coming into effect the turn after their purchase.",
-    "If a pile of upgrades runs out, that upgrade will be unavailable for the rest of this game."
+    "Upgrades are collected immediately and start benefitting you right away.",
+    "When a type of upgrades runs out, that upgrade remains unavailable for the rest of this game."
   ])
   example <<-EXAMPLE
-David decides to upgrade his ability Mining. Since he already has a starting mining upgrade he checks the second cost to see that it will cost two. He pays a silver from his hand and places a crew disk on the Mining pile. During Refresh he will move another Mining card in front of him and will draw one additional card when mining for the rest of the game.
+David decides to upgrade his Mining ability. Since he already has a starting mining upgrade he must pay the second cost of two. He pays a silver from his hand, takes a Mining card and places a crew disk on the Mining pile. He will now draw one additional resource when mining successfully for the rest of the game and no one else will be able to upgrade mining this turn.
 
-Susan decides to play it safe after her crash and upgrade her Armor. Even though the first Armor only costs one, the lowest value resource she has is a silver. She pays this, forgoing any change, and places a crew disk on the Armor pile. During Refresh she will move another Armor card in front of her and will add one to her mining die rolls for the rest of the game.
+Susan decides to play it safe after a crash and upgrade Armor. The first Armor only costs one, but the cheapest resource she has is a silver. She decides to pay this, despite not getting change back, takes an Armor card and places a crew disk on the Armor pile. She will add one to her die rolls for the rest of the game and no one else will be able to upgrade mining this turn.
 
-Teresa also decides to upgrade, and since Armor and Mining are taken, Crew his her only option. Since she has two starting Crew, she checks the third cost to see that it is 4. She pays a gold and a copper together to cover the cost and places a crew disk on the Crew pile. During Refresh she will move another Crew card in front of her and also take an additional crew disk which she may use for the rest of the game.
+Teresa also decides to upgrade, but Armor and Mining are taken so Crew is her only option. Since she has two starting Crew, she must pay the third cost of four. She pays a gold and a copper together to cover the cost, takes a Crew card and places a crew disk on the Crew pile. She will have this extra crew disk to take actions with for the rest of the game and no one else will be able to upgrade crew this turn.
 
-Morgan will not be able to purchase any upgrades this turn, but hopes to do so next turn.
+Morgan will not be able to purchase any upgrades this turn, but is hopeful that he can use resources he gathers this turn to get better upgrades next turn.
 EXAMPLE
 
   flavor <<-CONTENT
