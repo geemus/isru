@@ -163,10 +163,9 @@ CONTENT
 
   subheader("Refresh")
   list([
-    "If no player chose to draw contracts, discard the top three face up next to the contract draw pile.",
+    "If the contracts do not have a crew disk on them, discard the next three face up.",
     "All players collect their used crew tokens and any claimed upgrades.",
     "Pass the first player rocket to the next player in clockwise order.",
-    "Place these contracts face up, on top of previous contracts (or where previous contracts had been)."
   ])
 
   subheader("Game End")
@@ -214,19 +213,14 @@ Contracts get resources to people who'll pay good for 'em, but miss too many del
 CONTENT
   list([
     "Your score increases by the amount listed on face up, fulfilled contracts.",
-    "Choose contracts and draw:",
-    [
-      "As long as contracts remain in the draw pile, you may choose to draw 3.",
-      "As long as there are contracts in the discard pile, you may choose to draw 2."
-    ],
+    "Draw 3 contract cards and then place a crew disk in their place.",
     "From the drawn contracts, choose at least one to add to your hand of reserved contracts.",
-    "If there is only one contract in the discard pile, you may choose to draw and keep it.",
     "Be careful, when the game ends remaining reserved contracts reduce your score."
   ])
   example <<-EXAMPLE
-As there are no face down contracts yet, Morgan chooses to draw 3 face down contracts. He draws <i>CS</i>, <i>GG</i>, and <i>SSS</i>. He decides that since it is still early in the game, he keeps <i>SSS</i> as it is worth the most points, in the hopes that he can complete it by game end. He decides he would rather not take too many contracts at once though, so he discards <i>CS</i> and <i>GG</i>. Finally he places a crew disk on the contract draw pile.
+Morgan chooses to draws three contracts and places a crew disk on the contract pile. He draws <i>CS</i>, <i>GG</i>, and <i>SSS</i>. He decides that since it is still early in the game, he keeps <i>SSS</i> as it is worth the most points if he can complete it. He decides not take too many contracts at once though, so he discards <i>CS</i> and <i>GG</i>.
 
-Teresa would like to get the <i>SG</i> contract, but must wait until the following turn when contracts are once again available. When her turn comes up she chooses contracts and draws the two face up cards, <i>CS</i> and <i>GG</i> which Morgan discarded. She keeps <i>CS</i>, discards <i>GG</i>, and places her crew disk on the contract discard pile.
+Teresa would like to draw more contracts also, but must wait until the following turn when contracts are once again available. When her turn comes up she draws three contracts and places a crew disk. She draws <i>CS</i>, <i>CS</i> and <i>GG</i>. She keeps one <i>CS</i> and discards the other <i>CS</i> and the <i>GG</i>.
 EXAMPLE
 
   subheader("Fulfill Contracts")
