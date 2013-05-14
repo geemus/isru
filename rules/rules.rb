@@ -218,9 +218,9 @@ CONTENT
     "Be careful, when the game ends remaining reserved contracts reduce your score."
   ])
   example <<-EXAMPLE
-Morgan chooses to draws three contracts and places a crew disk on the contract pile. He draws <i>CS</i>, <i>GG</i>, and <i>SSS</i>. He decides that since it is still early in the game, he keeps <i>SSS</i> as it is worth the most points if he can complete it. He decides not take too many contracts at once though, so he discards <i>CS</i> and <i>GG</i>.
+Morgan chooses to draws three contracts and places a crew disk on the contract pile. He draws 'Copper + Silver', 'Two Gold', and 'Three Silver'. He decides to take a risk since it is early in the game and keeps 'Three Silver' as it is worth the most points if he can complete it. He decides not take too many contracts at once though, so he discards 'Copper + Silver' and 'Two Gold'.
 
-Teresa would like to draw more contracts also, but must wait until the following turn when contracts are once again available. When her turn comes up she draws three contracts and places a crew disk. She draws <i>CS</i>, <i>CS</i> and <i>GG</i>. She keeps one <i>CS</i> and discards the other <i>CS</i> and the <i>GG</i>.
+Teresa would like to draw more contracts also, but must wait until the following turn when contracts are once again available. When her turn comes up she draws three contracts and places a crew disk. She draws 'Copper + Silver', 'Copper + Silver' and 'Two Gold'. She keeps one 'Copper + Silver' and discards the other 'Copper + Silver' and the 'Two Gold'.
 EXAMPLE
 
   subheader("Fulfill Contracts")
@@ -236,7 +236,7 @@ CONTENT
     ]
   ])
   example <<-EXAMPLE
-Teresa previously drew <i>SG</i> from the discarded contracts. As she has both <i>Silver</i> and <i>Gold</i>, she chooses to fulfill this contract with her next action. She reveals the contract, discards the matching resources and places a crew disk on it. When the game ends she will now have that many more points.
+Teresa previously drew a 'Silver + Gold' contract. As she has both <i>Silver</i> and <i>Gold</i>, she chooses to fulfill this contract with her next action. She reveals the contract, discards the matching resources and places a crew disk on it. When the game ends she will now have fourteen more points.
 EXAMPLE
 
   subheader("Lounge")
@@ -283,5 +283,5 @@ EXAMPLE
 It's been fun, but all good things must end. You did a smidge too well, and MegaCorp got interested. They snatched up rights faster than a speeding asteroid. Thanks be, there's more asteroids, so maybe we'll see you again real soon.
 CONTENT
 
-  text('<color rgb="999999"><b>Components:</b> die; first player rocket, 4x4 crew disks (blue, green, orange, purple); 6x Asteroids (1-5); 24 Contracts 3x(CG, SS, CCC, SG, GG, CCCC, PP, SSS), 60x Resources (21x <i>Copper</i>, 17x <i>Silver</i>, 13x <i>Gold</i>, 9x <i>Platinum</i>); 33x Upgrades (15x <i>Crew</i>, 11x <i>Mining</i>, 7x <i>Armor</i>)</color>', :inline_format => true, :size => 10)
+  text('<color rgb="999999"><b>Components:</b> die; first player rocket, 4x4 crew disks (blue, green, orange, purple); 6x Asteroids (1-5); 24 Contracts 3x(Copper + Silver, Silver + Gold, Silver + Platinum, Copper + Gold + Platinum, Silver + Gold + Platinum, Two Gold, Three Copper, Three Silver, Four Copper), 60x Resources (21x <i>Copper</i>, 17x <i>Silver</i>, 13x <i>Gold</i>, 9x <i>Platinum</i>); 33x Upgrades (15x <i>Crew</i>, 11x <i>Mining</i>, 7x <i>Armor</i>)</color>', :inline_format => true, :size => 10)
 end
