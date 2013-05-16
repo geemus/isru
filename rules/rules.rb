@@ -7,14 +7,14 @@ def header(title)
     table(
       [[title]],
       :cell_style => {
-        :border_color => "666666",
+        :border_color => "CCCCCC",
         :font_style   => :bold,
         :padding      => 10,
         :size         => 12,
-        :text_color   => "666666",
+        :text_color   => "CCCCCC",
         :width        => 540
       },
-      :row_colors => ["CCCCCC"]
+      :row_colors => ["666666"]
     )
   end
 end
@@ -24,13 +24,31 @@ def subheader(title)
     table(
       [[title]],
       :cell_style => {
-        :border_color => "CCCCCC",
+        :border_color => "666666",
         :font_style   => :bold,
         :padding      => 8,
         :size         => 10,
-        :text_color   => "CCCCCC",
+        :text_color   => "666666",
+        :width        => 540
       },
-      :row_colors => ["666666"]
+      :row_colors => ["CCCCCC"]
+    )
+  end
+end
+
+def example(content)
+  pad_bottom(10) do
+    table(
+      [[content]],
+      :cell_style => {
+        :border_color => "EEEEEE",
+        :font_style   => :italic,
+        :padding      => 8,
+        :size         => 10,
+        :text_color   => "999999",
+        :width        => 540
+      },
+      :row_colors => ["EEEEEE"]
     )
   end
 end
@@ -44,10 +62,10 @@ def flavor(content)
         :font_style   => :italic,
         :padding      => 8,
         :size         => 10,
-        :text_color   => "999999",
+        :text_color   => "CCCCCC",
         :width        => 540
       },
-      :row_colors => ["EEEEEE"]
+      :row_colors => ["FFFFFF"]
     )
   end
 end
@@ -71,23 +89,6 @@ def list(elements)
         end
       end
     end
-  end
-end
-
-def example(content)
-  pad_bottom(10) do
-    table(
-      [[content]],
-      :cell_style => {
-        :border_color => "EEEEEE",
-        :font_style   => :italic,
-        :padding      => 8,
-        :size         => 10,
-        :text_color   => "999999",
-        :width        => 540
-      },
-      :row_colors => ["FFFFFF"]
-    )
   end
 end
 
@@ -137,7 +138,7 @@ CONTENT
     "<b>Scoring:</b> Players calculate their scores to find the winner."
   ])
 
-  header("Shared Setup")
+  header("Setup")
   image("#{File.dirname(__FILE__)}/setup.png", :position => :center, :fit => [480, 360])
   move_down(10)
   list([
@@ -155,9 +156,7 @@ CONTENT
     "Arrange the asteroids by their number from lowest to highest.",
   ])
 
-  header("Rounds")
-
-  subheader("Actions")
+  header("Actions")
   paragraph <<-CONTENT
 Starting with the first player, take turns in clockwise order, playing actions or passing. To play an action, place a crew disk on an empty action circle and follow the instructions for that location. To pass, place all your remaining crew disks on the <i>Lounge</i> location. The next player in clockwise order with remaining crew disks will take their turn. When all crew disks have been placed, the round ends. <b>Refresh</b> and begin the next round.
 CONTENT
@@ -250,7 +249,7 @@ Susan decides to play it safe after crashing and upgrade Armor. The first Armor 
 Teresa also decides to upgrade, but Armor and Mining are taken so Crew is her only option. With two starting Crew, she must pay the third cost of 4. She pays a gold and a copper together, takes a Crew card and places a crew disk. She will have this extra crew disk to use for the rest of the game and no one else may upgrade crew this round.
 EXAMPLE
 
-  subheader("Refresh")
+  header("Refresh")
   list([
     "If the contracts do not have a crew disk on them, discard the next three contracts face up.",
     "All players recollect the crew tokens the used last turn.",
@@ -258,7 +257,7 @@ EXAMPLE
     "If the contract draw pile is empty, the next round will be the final round of the game."
   ])
 
-  subheader("Game End")
+  header("Game End")
   flavor <<-CONTENT
 It's been fun, but all good things must end. You did a smidge too well, and MegaCorp got interested. They snatched up rights faster than a speeding asteroid. Thanks be, there's more asteroids, so maybe we'll see you again real soon.
 CONTENT
@@ -266,7 +265,7 @@ CONTENT
 If the contract draw pile is empty after <b>Refresh</b>, play one final round, then proceed to scoring.
 CONTENT
 
-  subheader("Scoring")
+  header("Scoring")
   paragraph <<-CONTENT
 Players add the value of their fulfilled contracts and remaining resources together, and then subtract reserved contracts to get their final score. The player with the highest score is the winner. In the event of a tie the player with the most fulfilled contracts is the winner. If there is still a tie, play again at the next asteroid field!
 CONTENT
