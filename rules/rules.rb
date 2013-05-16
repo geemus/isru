@@ -54,20 +54,20 @@ def example(content)
 end
 
 def flavor(content)
-  pad_bottom(10) do
-    table(
-      [[content]],
-      :cell_style => {
-        :border_color => "CCCCCC",
-        :font_style   => :italic,
-        :padding      => 8,
-        :size         => 10,
-        :text_color   => "CCCCCC",
-        :width        => 540
-      },
-      :row_colors => ["FFFFFF"]
-    )
-  end
+#  pad_bottom(10) do
+#    table(
+#      [[content]],
+#      :cell_style => {
+#        :border_color => "CCCCCC",
+#        :font_style   => :italic,
+#        :padding      => 8,
+#        :size         => 10,
+#        :text_color   => "CCCCCC",
+#        :width        => 540
+#      },
+#      :row_colors => ["FFFFFF"]
+#    )
+#  end
 end
 
 def list(elements)
