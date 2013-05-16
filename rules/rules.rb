@@ -124,12 +124,12 @@ CONTENT
     "<b>Setup:</b> Setup shared locations and distribute components to players.",
     "<b>Rounds:</b> Rounds contain many actions and then a <b>Refresh</b>.",
     [
-      "<b>Actions</b>: Players place crew disks to take actions or pass.",
+      "<b>Actions</b>: Players place crew disks to take actions.",
       [
         "<b>Asteroids</b>: Take a chance to gain resources.",
         "<b>Reserve Contracts</b>: Get more options of contracts to fulfill for points.",
         "<b>Fulfill Contracts</b>: Trade resources for points.",
-        "<b>Pass</b>: Avoid risk or expense but get no more actions for the round.",
+        "<b>Lounge</b>: Avoid risk or expense but get no more actions for the round.",
         "<b>Upgrades</b>: Trade resources for improved capabilities."
       ],
       "<b>Refresh</b>: Retrieve crew disks, reveal new contracts, and pass first player rocket."
@@ -158,7 +158,7 @@ CONTENT
 
   header("Actions")
   paragraph <<-CONTENT
-Starting with the first player, take turns in clockwise order, playing actions or passing. To play an action, place a crew disk on an empty action circle and follow the instructions for that location. To pass, place all your remaining crew disks on the <i>Lounge</i> location. The next player in clockwise order with remaining crew disks will take their turn. When all crew disks have been placed, the round ends. <b>Refresh</b> and begin the next round.
+Starting with the first player, take turns in clockwise order, playing actions. To play an action, place a crew disk on an empty action circle and follow the instructions for that location. The next player in clockwise order with remaining crew disks will take their turn. When all crew disks have been placed, the round ends. <b>Refresh</b> and begin the next round.
 CONTENT
 
   subheader("Asteroids")
@@ -215,12 +215,12 @@ EXAMPLE
 If you can't stand the heat, sometimes you just as well stay outta the kitchen.
 CONTENT
   list([
-    "Passing allows you to avoid risky or expensive actions.",
+    "Using the lounge allows you to avoid risky or expensive actions.",
     "Place all of your remaining crew disks onto an empty <i>Lounge</i> action circle.",
     "You will take no further actions this round, but will play as normal again in subsequent round."
   ])
   example <<-EXAMPLE
-Morgan has resources in hand which he hopes to use to fulfill his valuable Three Silver reserved contract. He sees the asteroids have grown risky late in the round. Since he does not want to spend or risk these resources nor take another unfulfilled contract, he passes by placing his remaining crew disks on to an empty Lounge action circle and hopes that his caution will pay off.
+Morgan has resources in hand which he hopes to use to fulfill his valuable Three Silver reserved contract. He sees the asteroids have grown risky late in the round. Since he does not want to spend or risk these resources nor take another unfulfilled contract, he places his remaining crew disks on the Lounge and hopes that his caution will pay off.
 EXAMPLE
 
   subheader("Upgrades")
