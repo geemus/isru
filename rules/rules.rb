@@ -75,9 +75,23 @@ def list(elements)
 end
 
 def example(content)
-  pad_bottom(8) do
-    text("<color rgb=\"999999\">\n#{content}</color>\n", :inline_format => true, :size => 10, :style => :italic)
+  pad_bottom(10) do
+    table(
+      [[content]],
+      :cell_style => {
+        :border_color => "EEEEEE",
+        :font_style   => :italic,
+        :padding      => 8,
+        :size         => 10,
+        :text_color   => "999999",
+        :width        => 540
+      },
+      :row_colors => ["FFFFFF"]
+    )
   end
+  #pad_bottom(8) do
+    #text("<color rgb=\"999999\">\n#{content}</color>\n", :inline_format => true, :size => 10, :style => :italic)
+  #end
 end
 
 def paragraph(content)
