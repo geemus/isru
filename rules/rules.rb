@@ -134,17 +134,15 @@ CONTENT
       ],
       "<b>Refresh</b>: Retrieve crew disks, reveal new contracts, and pass first player rocket."
     ],
-    "<b>Game End:</b> The final round begins when no contracts remain after <b>Refresh</b>.",
-    "<b>Scoring:</b> Players calculate their scores to find the winner."
+      "<b>Game End:</b> Play a final round when no contracts remain after <b>Refresh</b>, then calculate scores."
   ])
 
   header("Setup")
   image("#{File.dirname(__FILE__)}/setup.png", :position => :center, :fit => [480, 360])
   move_down(10)
   list([
-    "Gather upgrades by type (<i>Armor</i>, <i>Crew</i>, <i>Mining</i>).",
-    "Give each player two <i>Crew</i> upgrades and one <i>Mining</i> upgrade.",
-    "Gather crew disks, each player should choose a color and take two.",
+    "Gather upgrades by type, then give each player two <i>Crew</i> upgrades and one <i>Mining</i> upgrade.",
+    "Gather crew disks near the upgrade piles, each player should choose a different color and take two.",
     "First player will be whomever has spent the least time on Earth (or choose how you like).",
     "First player: take one <i>Copper</i> and the first player rocket.",
     "Second player in clockwise order: take one <i>Silver</i>.",
@@ -262,12 +260,7 @@ EXAMPLE
 It's been fun, but all good things must end. You did a smidge too well, and MegaCorp got interested. They snatched up rights faster than a speeding asteroid. Thanks be, there's more asteroids, so maybe we'll see you again real soon.
 CONTENT
   paragraph <<-CONTENT
-If the contract draw pile is empty after <b>Refresh</b>, play one final round, then proceed to scoring.
-CONTENT
-
-  header("Scoring")
-  paragraph <<-CONTENT
-Players add the value of their fulfilled contracts and remaining resources together, and then subtract reserved contracts to get their final score. The player with the highest score is the winner. In the event of a tie the player with the most fulfilled contracts is the winner. If there is still a tie, play again at the next asteroid field!
+If the contract draw pile is empty after <b>Refresh</b>, play one final round. Then players add the value of their resources and fulfilled contracts together and subtract the value of their reserved contracts to get a final score. The player with the highest score wins. In a tie the player with the most fulfilled contracts wins. If a tie remains, play again!
 CONTENT
   paragraph <<-CONTENT
 <b>Final Score</b> = <i>resources</i> + <i>fulfilled contracts</i> - <i>reserved contracts</i>
