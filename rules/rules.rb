@@ -101,21 +101,18 @@ Prawn::Document.generate("#{File.dirname(__FILE__)}/../assets/isru.pdf") do
   end
 
   flavor <<-CONTENT
-It was only a matter of time before somebody figured out how to snatch up them resources that were floating about. Just don't be fooled into think'n they figured how to do safe like. Risk comes with reward though, least til MegaCorp buys up the rights... Best strike while the iron's hot, welcome to the asteroids!
+It was only a matter of time before somebody started snatching up them asteroids. But don't be fooled think'n they can do it safe like. Risk comes with reward though, least til MegaCorp buys the rights... Best strike while the iron's hot, welcome to the asteroids!
 CONTENT
 
   header("Overview")
   paragraph <<-CONTENT
-Balance mining, upgrading, and fulfilling contracts to earn the most points before contracts run out!
+Balance mining, upgrading, and contracts to earn points until contracts run out!
 CONTENT
-
-  header("Game Flow")
   list([
-    "<b>Shared Setup</b>",
-    "<b>Each Player Setup</b>",
-    "<b>Rounds</b>",
+    "<b>Setup:</b> Setup shared locations and distribute components to players.",
+    "<b>Rounds:</b> Rounds contain many actions and then a <b>Refresh</b>.",
     [
-      "<b>Actions</b>: Players take turns placing crew disks to take actions.",
+      "<b>Actions</b>: Players place crew disks to take actions or pass.",
       [
         "<b>Asteroids</b>: Take a chance to gain resources.",
         "<b>Reserve Contracts</b>: Get more options of contracts to fulfill for points.",
@@ -125,86 +122,57 @@ CONTENT
       ],
       "<b>Refresh</b>: Retrieve crew disks, reveal new contracts, and pass first player rocket."
     ],
-    "<b>Game End</b>",
-    "<b>Scoring</b>"
+    "<b>Game End:</b> The final round begins when no contracts remain after <b>Refresh</b>.",
+    "<b>Scoring:</b> Players calculate their scores to find the winner."
   ])
 
   header("Shared Setup")
   image("#{File.dirname(__FILE__)}/setup.jpg", :position => :center, :fit => [320, 240])
   move_down(10)
   list([
-    "Gather upgrades in piles by type (<i>Armor</i>, <i>Crew</i>, <i>Mining</i>).",
-    "Set aside two <i>Copper</i>, and three <i>Silver</i>.",
+    "Gather upgrades by type (<i>Armor</i>, <i>Crew</i>, <i>Mining</i>).",
+    "Give each player two <i>Crew</i> upgrades and one <i>Mining</i> upgrade.",
+    "Gather crew disks, each player should choose a color and take two.",
+    "First player will be whomever has spent the least time on Earth (or choose how you like).",
+    "First player: take one <i>Copper</i> and the first player rocket.",
+    "Second player in clockwise order: take one <i>Silver</i>.",
+    "Third player in clockwise order: take one <i>Copper</i> and one <i>Silver</i>.",
+    "Fourth player in clockwise order: take two <i>Copper</i> and one <i>Silver</i>.",
     "Shuffle remaining resources and form a draw pile near the asteroids.",
-    "Shuffle contracts to form a draw pile.",
-    "Arrange the asteroids by their number from lowest to highest."
-  ])
-
-  header("Each Player Setup")
-  list([
-    "Take all crew disks of the same color.",
-    "Keep two crew disks and set aside the rest near the upgrade piles.",
-    "Place two <i>Crew</i> cards in front of you to indicate how many crew disks you may use each round.",
-    "Place one <i>Mining</i> card in front of you to indicate how many resources to draw when mining.",
-    "The person who has spent the least time on Earth may take the first player rocket.",
-    "The first player should take one <i>Copper</i> from those set aside during setup.",
-    "The second player should take one <i>Silver</i> from those set aside during setup.",
-    "The third player should take one <i>Copper</i>, and one <i>Silver</i> from those set aside during setup.",
-    "The fourth player should take two <i>Silver</i> from those set aside during setup.",
-    "Draw three contract cards and choose at least one to keep."
+    "Shuffle contract cards and deal three to each player.",
+    "Players may discard from these contracts, but must keep at least one each.",
+    "Arrange the asteroids by their number from lowest to highest.",
   ])
 
   header("Rounds")
 
   subheader("Actions")
   paragraph <<-CONTENT
-Starting with the player holding the first player rocket, players take turns playing actions or passing. To play an action, place a crew disk on an empty action circle and follow the instructions for that location. To pass, place your remaining crew disks on the <i>Lounge</i> location. After taking an action or passing, the next player in clockwise order with remaining crew disks will take their turn. When all crew disks have been placed, the round ends and you <b>Refresh</b> to prepare for the next round.
+Starting with the first player, take turns in clockwise order, playing actions or passing. To play an action, place a crew disk on an empty action circle and follow the instructions for that location. To pass, place all your remaining crew disks on the <i>Lounge</i> location. The next player in clockwise order with remaining crew disks will take their turn. When all crew disks have been placed, the round ends. <b>Refresh</b> and begin the next round.
 CONTENT
-
-  subheader("Refresh")
-  list([
-    "If the contracts do not have a crew disk on them, discard the next three face up.",
-    "All players recollect their crew tokens.",
-    "Pass the first player rocket to the next player in clockwise order.",
-  ])
-
-  subheader("Game End")
-  paragraph <<-CONTENT
-The game ends on the turn in which there are no contracts left in the draw pile, regardless of whether they were drawn or discarded.
-CONTENT
-
-  subheader("Scoring")
-  paragraph <<-CONTENT
-Players add the values of their fulfilled contracts and remaining resources together and subtract reserved contracts still in their hand to get their final score. The player with the highest score is the winner. In the event of a tie, play again in a new asteroid field!
-CONTENT
-  paragraph <<-CONTENT
-<b>Final Score</b> = <i>resources</i> + <i>fulfilled contracts</i> - <i>reserved contracts</i>
-CONTENT
-
-  header("Actions")
 
   subheader("Asteroids")
   flavor <<-CONTENT
-Getting yourself out to the frontier may have been a struggle, but out in the asteroids it gets real sketchy. Insurance comes to the rescue when disaster strikes and believe me, it will. They'll tow your ship's bits in to get patched up, but not your cargo... So keep your eyes open, but don't be too scared to chase them big scores.
+Getting out to the frontier may have been a struggle, but out in them asteroids it gets real sketchy. Insurance can save you when disaster strikes, and believe me it will. They'll tow your ship's bits in to get patched up, but not your cargo... So keep your eyes open when chasin' them big scores.
 CONTENT
   list([
-    "Find the asteroid with the lowest number and place a crew disks on the next open circle.",
-    "Roll the die, add your number of <i>Armor</i> cards and compare against the number:",
-    "If your total is greater than the number:",
+    "Place a crew disks on the next open action circle of the lowest available asteroid.",
+    "Roll the die, add your number of <i>Armor</i> cards and compare:",
+    "If your total is greater than the number on the asteroid:",
     [
       "You successfully mined! Draw resources equal to your number of <i>Mining</i> cards.",
-      "If the resources run out, shuffle discarded resources to form a new draw pile."
+      "If resources run out, shuffle discarded resources to form a new draw pile."
     ],
-    "If your total is less than or equal to the number:",
+    "If your total is less than or equal to the number on the asteroid:",
     [
-      "You crashed! Discard your hand.",
-      "Place your remaining crew disk on the next open circles on the lowest number asteroids.",
+      "You crashed! Discard all of your resources.",
+      "Place your remaining crew disk on open action circles starting with the lowest number asteroid.",
     ]
   ])
   example <<-EXAMPLE
-David got the platinum, so he will go first. He decides to mine and places one of his crew disks on the first asteroid space, which has the number 2. He rolls a 4, which beats the number. Since he has one mining upgrade, he draws one resource card and ends his turn.
+David places one of his crew disks on the first asteroid space. He rolls a 4, which beats the 2 on the asteroid. He draws one resource card for his one mining card.
 
-Susan got gold and so she will go second. She also decides to mine and places one crew disk on the next asteroid space, which has the number 3. She rolls a 3, which does not beat the number. Armor would add one to her roll for each upgrade, but she has none. She crashes, placing her remaining crew disk on the next available spot and discarding her gold. This ends her turn and she will have to wait to reclaim her crew disks during <i>Refresh</i> before she will be able to take additional actions.
+Susan places one crew disk on the next asteroid space. She rolls a 3, which only ties the 3 on the asteroid. Armor may have added to her roll, but she has none and crashes. She places her remaining crew disk on the next available action circle and discards her resources. She will have to wait until next round to take further actions.
 EXAMPLE
 
   subheader("Reserve Contracts")
@@ -212,15 +180,12 @@ EXAMPLE
 Contracts get resources to people who'll pay good for 'em, but miss too many deliveries and you'll be outta business.
 CONTENT
   list([
-    "Your score increases by the amount listed on face up, fulfilled contracts.",
-    "Draw 3 contract cards and then place a crew disk in their place.",
-    "From the drawn contracts, choose at least one to add to your hand of reserved contracts.",
+    "Draw 3 contract cards and place a crew disk in their place.",
+    "From the drawn contracts, choose at least one to add to your reserved contracts.",
     "Be careful, when the game ends remaining reserved contracts reduce your score."
   ])
   example <<-EXAMPLE
-Morgan chooses to draws three contracts and places a crew disk on the contract pile. He draws 'Copper + Silver', 'Two Gold', and 'Three Silver'. He decides to take a risk since it is early in the game and keeps 'Three Silver' as it is worth the most points if he can complete it. He decides not take too many contracts at once though, so he discards 'Copper + Silver' and 'Two Gold'.
-
-Teresa would like to draw more contracts also, but must wait until the following turn when contracts are once again available. When her turn comes up she draws three contracts and places a crew disk. She draws 'Copper + Silver', 'Copper + Silver' and 'Two Gold'. She keeps one 'Copper + Silver' and discards the other 'Copper + Silver' and the 'Two Gold'.
+Morgan draws three contracts and places a crew disk on the contract pile. He draws 'Copper + Silver', 'Two Gold', and 'Three Silver'. He decides to take a risk keeps 'Three Silver' as it is worth the most points. He decides not take too many contracts at once though, and discards 'Copper + Silver' and 'Two Gold'.
 EXAMPLE
 
   subheader("Fulfill Contracts")
@@ -228,28 +193,24 @@ EXAMPLE
 Promises are well and good, but no rest for the wicked; least not until you deliver.
 CONTENT
   list([
+    "When the game ends your fufilled contracts will be added to your score.",
     "Reveal one of your reserved contracts and pay the matching resources to place your crew disk on it.",
-    "When the game ends your score will be:",
-    [
-      "Increased by the total amount shown on your fulfilled contracts.",
-      "Decreased by the total amount on your remaining reserved contracts."
-    ]
   ])
   example <<-EXAMPLE
-Teresa previously drew a 'Silver + Gold' contract. As she has both <i>Silver</i> and <i>Gold</i>, she chooses to fulfill this contract with her next action. She reveals the contract, discards the matching resources and places a crew disk on it. When the game ends she will now have fourteen more points.
+Teresa previously drew a 'Silver + Gold' contract and has both <i>Silver</i> and <i>Gold</i>. She reveals the contract, discards the matching resources and places a crew disk on it. When the game ends she will have an additional fourteen points.
 EXAMPLE
 
   subheader("Lounge")
   flavor <<-CONTENT
-If you can't stand the heat, sometimes you just as well avoid the fire.
+If you can't stand the heat, sometimes you just as well stay outta the kitchen.
 CONTENT
   list([
     "Passing allows you to avoid risky or expensive actions.",
-    "Place all of your remaining crew disks onto the <i>Lounge</i> to indicate you are finished for this round.",
-    "You will take no further actions this round, but will play as normal again in the following round."
+    "Place all of your remaining crew disks onto an empty <i>Lounge</i> action circle.",
+    "You will take no further actions this round, but will play as normal again in subsequent round."
   ])
   example <<-EXAMPLE
-Morgan has resources in hand which he hopes to use to fulfill his valuable Three Silver reserved contract. He sees that the asteroids are nearly full late in the round after several actions. Since he does not want to spend or risk these resources and does not want to take another unfulfilled contract, he instead passes his remaining actions by placing his crew disks on the Lounge and hoping that next turn his caution will pay off.
+Morgan has resources in hand which he hopes to use to fulfill his valuable Three Silver reserved contract. He sees the asteroids have grown risky late in the round. Since he does not want to spend or risk these resources nor take another unfulfilled contract, he passes by placing his remaining crew disks on to an empty Lounge action circle and hopes that his caution will pay off.
 EXAMPLE
 
   subheader("Upgrades")
@@ -257,30 +218,49 @@ EXAMPLE
 That hunk-a-junk might get you out and back, but you best visit the mechanics if you wanna be major league.
 CONTENT
   list([
-    "There are several available upgrades, each providing a different bonus.",
+    "There are several available upgrades, each providing different bonuses:",
     [
       "<i>Armor</i>:   Add one to your asteroids die roll for each armor upgrade card.",
       "<i>Crew</i>:    Use one crew disks each round for each crew upgrade card.",
-      "<i>Mining</i>:  Draw one resource for each mining upgrade card when asteroids roll succeeds."
+      "<i>Mining</i>:  Draw one resource for each mining upgrade card when succeeding on asteroids."
     ],
-    "Pay the cost on the upgrade card to collect it and place your crew disk on it.",
+    "Pay the cost on the upgrade card to collect it and place your crew disk in its place.",
     "Costs are for the first, second, third, and forth upgrade of this type that you purchase.",
     "You may pay by discarding any combination of resources from your hand, but recieve no change.",
     "Upgrades are collected immediately and start benefitting you right away.",
-    "When a type of upgrades runs out, that upgrade remains unavailable for the rest of this game."
+    "Each type (<i>Armor</i>, <i>Crew</i> or <i>Mining</i>) may only be used by one player per round.",
+    "If a type of upgrades runs out, that upgrade remains unavailable for the rest of this game."
   ])
   example <<-EXAMPLE
-David decides to upgrade his Mining ability. Since he already has a starting mining upgrade he must pay the second cost of two. He pays a silver from his hand, takes a Mining card and places a crew disk on the Mining pile. He will now draw one additional resource when mining successfully for the rest of the game and no one else will be able to upgrade mining this turn.
+David decides to upgrade his Mining ability. He has his initial mining upgrade, so he must pay the second cost of 2. He pays a silver from his hand, takes a Mining card and places a crew disk. He will draw one additional resource when succeeding on asteroids for the rest of the game and no one else may upgrade mining this round.
 
-Susan decides to play it safe after a crash and upgrade Armor. The first Armor only costs one, but the cheapest resource she has is a silver. She decides to pay this, despite not getting change back, takes an Armor card and places a crew disk on the Armor pile. She will add one to her die rolls for the rest of the game and no one else will be able to upgrade mining this turn.
+Susan decides to play it safe after crashing and upgrade Armor. The first Armor only costs 1, but the cheapest resource she has is a silver. She decides to pay this, losing the change, takes an Armor card and places a crew disk. She will add one to her die rolls for the rest of the game and no one else may upgrade mining this round.
 
-Teresa also decides to upgrade, but Armor and Mining are taken so Crew is her only option. Since she has two starting Crew, she must pay the third cost of four. She pays a gold and a copper together to cover the cost, takes a Crew card and places a crew disk on the Crew pile. She will have this extra crew disk to take actions with for the rest of the game and no one else will be able to upgrade crew this turn.
-
-Morgan will not be able to purchase any upgrades this turn, but is hopeful that he can use resources he gathers this turn to get better upgrades next turn.
+Teresa also decides to upgrade, but Armor and Mining are taken so Crew is her only option. With two starting Crew, she must pay the third cost of 4. She pays a gold and a copper together, takes a Crew card and places a crew disk. She will have this extra crew disk to use for the rest of the game and no one else may upgrade crew this round.
 EXAMPLE
 
+  subheader("Refresh")
+  list([
+    "If the contracts do not have a crew disk on them, discard the next three contracts face up.",
+    "All players recollect the crew tokens the used last turn.",
+    "Pass the first player rocket clockwise to the next player.",
+    "If the contract draw pile is empty, the next round will be the final round of the game."
+  ])
+
+  subheader("Game End")
   flavor <<-CONTENT
 It's been fun, but all good things must end. You did a smidge too well, and MegaCorp got interested. They snatched up rights faster than a speeding asteroid. Thanks be, there's more asteroids, so maybe we'll see you again real soon.
+CONTENT
+  paragraph <<-CONTENT
+If the contract draw pile is empty after <b>Refresh</b>, play one final round, then proceed to scoring.
+CONTENT
+
+  subheader("Scoring")
+  paragraph <<-CONTENT
+Players add the value of their fulfilled contracts and remaining resources together, and then subtract reserved contracts to get their final score. The player with the highest score is the winner. In the event of a tie the player with the most fulfilled contracts is the winner. If there is still a tie, play again at the next asteroid field!
+CONTENT
+  paragraph <<-CONTENT
+<b>Final Score</b> = <i>resources</i> + <i>fulfilled contracts</i> - <i>reserved contracts</i>
 CONTENT
 
   text('<color rgb="999999"><b>Components:</b> die; first player rocket, 4x4 crew disks (blue, green, orange, purple); 6x Asteroids (1-5); 24 Contracts 3x(Copper + Silver, Silver + Gold, Silver + Platinum, Copper + Gold + Platinum, Silver + Gold + Platinum, Two Gold, Three Copper, Three Silver, Four Copper), 60x Resources (21x <i>Copper</i>, 17x <i>Silver</i>, 13x <i>Gold</i>, 9x <i>Platinum</i>); 33x Upgrades (15x <i>Crew</i>, 11x <i>Mining</i>, 7x <i>Armor</i>)</color>', :inline_format => true, :size => 10)
