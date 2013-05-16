@@ -89,9 +89,6 @@ def example(content)
       :row_colors => ["FFFFFF"]
     )
   end
-  #pad_bottom(8) do
-    #text("<color rgb=\"999999\">\n#{content}</color>\n", :inline_format => true, :size => 10, :style => :italic)
-  #end
 end
 
 def paragraph(content)
@@ -141,7 +138,7 @@ CONTENT
   ])
 
   header("Shared Setup")
-  image("#{File.dirname(__FILE__)}/setup.jpg", :position => :center, :fit => [320, 240])
+  image("#{File.dirname(__FILE__)}/setup.png", :position => :center, :fit => [480, 360])
   move_down(10)
   list([
     "Gather upgrades by type (<i>Armor</i>, <i>Crew</i>, <i>Mining</i>).",
