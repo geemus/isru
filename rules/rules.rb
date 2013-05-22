@@ -262,9 +262,9 @@ CONTENT
   paragraph <<-CONTENT
 If the contract draw pile is empty after <b>Refresh</b>, play one final round. Then players add the value of their resources and fulfilled contracts together and subtract the value of their reserved contracts to get a final score. The player with the highest score wins. In a tie the player with the most fulfilled contracts wins. If a tie remains, play again!
 CONTENT
-  paragraph <<-CONTENT
-<b>Final Score</b> = <i>resources</i> + <i>fulfilled contracts</i> - <i>reserved contracts</i>
-CONTENT
+pad_bottom(8) do
+  text("<b>Final Score</b> = <i>resources</i> + <i>fulfilled contracts</i> - <i>reserved contracts</i>", :align => :center, :inline_format => true)
+end
 
 #  text('<color rgb="999999"><b>Components:</b> die; first player rocket, 4x4 crew disks (blue, green, orange, purple); 6x Asteroids (1-5); 24 Contracts 3x(Copper + Silver, Silver + Gold, Silver + Platinum, Copper + Gold + Platinum, Silver + Gold + Platinum, Two Gold, Three Copper, Three Silver, Four Copper), 60x Resources (21x <i>Copper</i>, 17x <i>Silver</i>, 13x <i>Gold</i>, 9x <i>Platinum</i>); 33x Upgrades (15x <i>Crew</i>, 11x <i>Mining</i>, 7x <i>Armor</i>)</color>', :inline_format => true, :size => 10)
 end
