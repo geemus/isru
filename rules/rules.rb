@@ -149,7 +149,8 @@ CONTENT
     "Third player in clockwise order: take one <i>Copper</i> and one <i>Silver</i>.",
     "Fourth player in clockwise order: take one <i>Copper</i> and one <i>Gold</i>.",
     "Shuffle remaining resources and form a draw pile near the asteroids.",
-    "Shuffle contract cards and deal three to each player.",
+    "Shuffle contract cards, and set aside the card, it will not be used this game.",
+    "Deal two of the remaining contracts to each player.",
     "Players may discard from these contracts, but must keep at least one each.",
     "Arrange the asteroids by their number from lowest to highest.",
   ])
@@ -188,12 +189,12 @@ EXAMPLE
 Contracts get resources to people who'll pay good for 'em, but miss too many deliveries and you'll be outta business.
 CONTENT
   list([
-    "Draw 3 contract cards and place a crew disk in their place.",
+    "Draw two contract cards and place a crew disk in their place.",
     "From the drawn contracts, choose at least one to add to your reserved contracts.",
     "Be careful, when the game ends remaining reserved contracts reduce your score."
   ])
   example <<-EXAMPLE
-Morgan draws three contracts and places a crew disk on the contract pile. He draws 'Copper + Silver', 'Two Gold', and 'Three Silver'. He decides to take a risk keeps 'Three Silver' as it is worth the most points. He decides not take too many contracts at once though, and discards 'Copper + Silver' and 'Two Gold'.
+Morgan draws two contracts and places a crew disk on the contract pile. He draws 'Copper + Silver', and 'Three Silver'. He decides to take a risk keeps 'Three Silver' as it is worth the most points. He decides not take too many contracts at once though, and discards 'Copper + Silver'.
 EXAMPLE
 
   subheader("Fulfill Contracts")
@@ -249,7 +250,7 @@ EXAMPLE
 
   header("Refresh")
   list([
-    "If the contracts do not have a crew disk on them, discard the next three contracts face up.",
+    "If the contracts do not have a crew disk on them, discard the next two contracts face up.",
     "All players recollect the crew tokens the used last turn.",
     "Pass the first player rocket clockwise to the next player.",
     "If the contract draw pile is empty, the next round will be the final round of the game."
@@ -266,5 +267,5 @@ pad_bottom(8) do
   text("<b>Final Score</b> = <i>resources</i> + <i>fulfilled contracts</i> - <i>reserved contracts</i>", :align => :center, :inline_format => true)
 end
 
-#  text('<color rgb="999999"><b>Components:</b> die; first player rocket, 4x4 crew disks (blue, green, orange, purple); 6x Asteroids (1-5); 24 Contracts 3x(Copper + Silver, Silver + Gold, Silver + Platinum, Copper + Gold + Platinum, Silver + Gold + Platinum, Two Gold, Three Copper, Three Silver, Four Copper), 60x Resources (21x <i>Copper</i>, 17x <i>Silver</i>, 13x <i>Gold</i>, 9x <i>Platinum</i>); 33x Upgrades (15x <i>Crew</i>, 11x <i>Mining</i>, 7x <i>Armor</i>)</color>', :inline_format => true, :size => 10)
+# text('<color rgb="999999"><b>Components:</b> die; first player rocket, 4x4 crew disks (blue, green, orange, purple); 6x Asteroids (1-5); 27 Contracts 3x(Copper + Silver, Silver + Gold, Silver + Platinum, Copper + Gold + Platinum, Silver + Gold + Platinum, Two Gold, Three Copper, Three Silver, Four Copper), 60x Resources (21x <i>Copper</i>, 17x <i>Silver</i>, 13x <i>Gold</i>, 9x <i>Platinum</i>); 33x Upgrades (15x <i>Crew</i>, 11x <i>Mining</i>, 7x <i>Armor</i>)</color>', :inline_format => true, :size => 10)
 end
