@@ -174,7 +174,7 @@ CONTENT
     ],
     "If your total is less than or equal to the number on the asteroid:",
     [
-      "You crashed! Discard all of your resources.",
+      "You crashed! Discard half of your resources, rounding down.",
       "Place your remaining crew disk on open action circles starting with the lowest number asteroid.",
     ]
   ])
