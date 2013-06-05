@@ -179,9 +179,9 @@ CONTENT
     ]
   ])
   example <<-EXAMPLE
-David places one of his crew disks on the first asteroid space. He rolls a 4, which beats the 2 on the asteroid. He draws one resource card for his one mining card.
+David places a crew disks on the first asteroid space. He rolls a 4, which is greater than the 1 on the asteroid. He draws one resource card, matching his one mining card.
 
-Susan places one crew disk on the next asteroid space. She rolls a 3, which only ties the 3 on the asteroid. Armor may have added to her roll, but she has none and crashes. She places her remaining crew disk on the next available action circle and discards her resources. She will have to wait until next round to take further actions.
+Susan places a crew disk on the next asteroid space. She rolls a 2, which only ties the 2 on the asteroid. Armor may have added to her roll, but she has none and crashes. She places her remaining crew disk on the next available action circle and discards half her resources, rounding down. She will have to wait until next round to take further actions.
 EXAMPLE
 
   subheader("Reserve Contracts")
@@ -194,7 +194,7 @@ CONTENT
     "Be careful, when the game ends remaining reserved contracts reduce your score."
   ])
   example <<-EXAMPLE
-Morgan draws two contracts and places a crew disk on the contract pile. He draws 'Copper + Silver', and 'Three Silver'. He decides to take a risk keeps 'Three Silver' as it is worth the most points. He decides not take too many contracts at once though, and discards 'Copper + Silver'.
+Morgan draws two contracts and places a crew disk on the contract pile. He draws 'Copper + Silver', and 'Three Silver'. He keeps 'Three Silver' as it is worth more points, but discards 'Copper + Silver' to limit his total risk.
 EXAMPLE
 
   subheader("Fulfill Contracts")
@@ -206,7 +206,7 @@ CONTENT
     "Reveal one of your reserved contracts and pay the matching resources to place your crew disk on it.",
   ])
   example <<-EXAMPLE
-Teresa previously drew a 'Silver + Gold' contract and has both <i>Silver</i> and <i>Gold</i>. She reveals the contract, discards the matching resources and places a crew disk on it. When the game ends she will have an additional fourteen points.
+Teresa reveals a 'Silver + Gold' contract from her reserved contracts, discards Silver and Gold from her hand and places a crew disk on the contract. When the game ends she will now have an additional 14 points.
 EXAMPLE
 
   subheader("Lounge")
@@ -219,7 +219,7 @@ CONTENT
     "You will take no further actions this round, but will play as normal again in subsequent round."
   ])
   example <<-EXAMPLE
-Morgan has resources in hand which he hopes to use to fulfill his valuable Three Silver reserved contract. He sees the asteroids have grown risky late in the round. Since he does not want to spend or risk these resources nor take another unfulfilled contract, he places his remaining crew disks on the Lounge and hopes that his caution will pay off.
+Morgan has two silver in hand which he hopes to use toward his 'Three Silver' reserved contract. Seeing that the asteroids have become risky, he places his remaining crew disks on the lounge and hopes his caution will pay off.
 EXAMPLE
 
   subheader("Upgrades")
@@ -241,11 +241,11 @@ CONTENT
     "If a type of upgrades runs out, that upgrade remains unavailable for the rest of this game."
   ])
   example <<-EXAMPLE
-David decides to upgrade his Mining ability. He has his initial mining upgrade, so he must pay the second cost of 2. He pays a silver from his hand, takes a Mining card and places a crew disk. He will draw one additional resource when succeeding on asteroids for the rest of the game and no one else may upgrade mining this round.
+David decides to upgrade from his initial Mining card, so he must pay the second cost of 2. He pays a Silver from his hand, takes a Mining card and places a crew disk. He will draw two resources when succeeding on asteroids for the rest of the game.
 
-Susan decides to play it safe after crashing and upgrade Armor. The first Armor only costs 1, but the cheapest resource she has is a silver. She decides to pay this, losing the change, takes an Armor card and places a crew disk. She will add one to her die rolls for the rest of the game and no one else may upgrade mining this round.
+Susan decides to play it safe after crashing and upgrade Armor. The first Armor only costs 1, but the cheapest resource she has is a Silver. She decides to pay this, losing the change, takes an Armor card and places a crew disk. She will add one to her die rolls for the rest of the game.
 
-Teresa also decides to upgrade, but Armor and Mining are taken so Crew is her only option. With two starting Crew, she must pay the third cost of 4. She pays a gold and a copper together, takes a Crew card and places a crew disk. She will have this extra crew disk to use for the rest of the game and no one else may upgrade crew this round.
+Teresa also decides to upgrade, but Armor and Mining are taken, leaving only Crew. With two starting Crew, she must pay the third cost of 4. She pays Gold and Copper together, takes a Crew card and places a crew disk. She will have this extra crew disk to use for the rest of the game.
 EXAMPLE
 
   header("Refresh")
