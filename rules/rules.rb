@@ -268,4 +268,11 @@ pad_bottom(8) do
 end
 
 # text('<color rgb="999999"><b>Components:</b> die; first player rocket, 4x4 crew disks (blue, green, orange, purple); 6x Asteroids (1-5); 27 Contracts 3x(Copper + Silver, Silver + Gold, Silver + Platinum, Copper + Gold + Platinum, Silver + Gold + Platinum, Two Gold, Three Copper, Three Silver, Four Copper), 60x Resources (21x <i>Copper</i>, 17x <i>Silver</i>, 13x <i>Gold</i>, 9x <i>Platinum</i>); 33x Upgrades (15x <i>Crew</i>, 11x <i>Mining</i>, 7x <i>Armor</i>)</color>', :inline_format => true, :size => 10)
+
+  number_pages(
+    '<page>/<total>',
+    :align => :center,
+    :at    => [0, bounds.bottom]
+  )
+
 end
