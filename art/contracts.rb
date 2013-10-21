@@ -44,6 +44,7 @@ require File.expand_path(File.join(DIRECTORY, 'art'))
   circles(texts, 1)
 
   composite = card.composite(texts, 0, 0, Magick::SrcOverCompositeOp)
+  composite.level(0, Magick::QuantumRange, 1.5)
   composite.write("#{DIRECTORY}/../assets/contracts/#{type.gsub(' ', '')}_#{value}.png")
 end
 

@@ -42,6 +42,7 @@ def box_top(location)
     self.rotation   = 270
   end
 
+  image.level(0, Magick::QuantumRange, 1.5)
   image.write(location)
 end
 
@@ -72,6 +73,7 @@ def box_bottom(location)
     self.rotation   = 270
   end
 
+  image.level(0, Magick::QuantumRange, 1.5)
   image.write(location)
 end
 
@@ -101,6 +103,7 @@ def card_back(label, location)
   texts = text.composite(flip_flop, 0, 0, Magick::SrcOverCompositeOp)
 
   composite = card(BASE03).composite(texts, 0, 0, Magick::SrcOverCompositeOp)
+  composite.level(0, Magick::QuantumRange, 1.5)
   composite.write(location)
 end
 
@@ -126,6 +129,7 @@ def card_back_circle(label, location)
 
   circles(composite, 1)
 
+  composite.level(0, Magick::QuantumRange, 1.5)
   composite.write(location)
 end
 
@@ -150,6 +154,7 @@ def mini_card_back(label, location)
   texts = text.composite(flip_flop, 0, 0, Magick::SrcOverCompositeOp)
 
   composite = card(BASE03).composite(texts, 0, 0, Magick::SrcOverCompositeOp)
+  composite.level(0, Magick::QuantumRange, 1.5)
   composite.write(location)
 end
 

@@ -34,6 +34,7 @@ require File.expand_path(File.join(DIRECTORY, 'art'))
   texts = text.composite(flip_flop, 0, 0, Magick::SrcOverCompositeOp)
 
   composite = card.composite(texts, 0, 0, Magick::SrcOverCompositeOp)
+  composite.level(0, Magick::QuantumRange, 1.5)
   composite.write("#{DIRECTORY}/../assets/resources/#{type}_#{value}.png")
 end
 

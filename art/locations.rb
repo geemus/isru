@@ -38,6 +38,7 @@ require File.expand_path(File.join(DIRECTORY, 'art'))
   circles(texts, circles)
 
   composite = card.composite(texts, 0, 0, Magick::SrcOverCompositeOp)
+  composite.level(0, Magick::QuantumRange, 1.5)
   composite.write("#{DIRECTORY}/../assets/locations/Asteroids_#{goal}.png")
 end
 
@@ -56,6 +57,7 @@ texts = text.composite(flip_flop, 0, 0, Magick::SrcOverCompositeOp)
 circles(texts, 4)
 
 composite = card.composite(texts, 0, 0, Magick::SrcOverCompositeOp)
+composite.level(0, Magick::QuantumRange, 1.5)
 composite.write("#{DIRECTORY}/../assets/locations/Lounge.png")
 
 # Back
