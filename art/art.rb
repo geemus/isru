@@ -158,7 +158,7 @@ def mini_card_back(label, location)
   composite.write(location)
 end
 
-def circle(image, x, y, radius)
+def draw_circle(image, x, y, radius)
   circle = Magick::Draw.new
   circle.fill         = "transparent"
   circle.stroke       = BASE0
@@ -167,28 +167,66 @@ def circle(image, x, y, radius)
   circle.draw(image)
 end
 
+def circle(image)
+  circle = Magick::Draw.new
+  circle.fill         = "transparent"
+  circle.stroke       = BASE0
+  circle.stroke_width = 5
+  # 412, 562
+  circle.circle(412, 562, 412, 642)
+  circle.draw(image)
+end
+
+def diamond(image)
+  diamond = Magick::Draw.new
+  diamond.fill         = "transparent"
+  diamond.stroke       = BASE0
+  diamond.stroke_width = 5
+  # 412, 562
+  diamond.line(412, 482, 492, 562)
+  diamond.line(492, 562, 412, 642)
+  diamond.line(412, 642, 332, 562)
+  diamond.line(332, 562, 412, 482)
+  diamond.draw(image)
+end
+
+def hexagon(image)
+  hexagon = Magick::Draw.new
+  hexagon.fill         = "transparent"
+  hexagon.stroke       = BASE0
+  hexagon.stroke_width = 5
+  # 412, 562
+  hexagon.line(412, 482, 482, 522)
+  hexagon.line(482, 522, 482, 602)
+  hexagon.line(482, 602, 412, 642)
+  hexagon.line(412, 642, 342, 602)
+  hexagon.line(342, 602, 342, 522)
+  hexagon.line(342, 522, 412, 482)
+  hexagon.draw(image)
+end
+
 def circles(image, count)
   case count
   when 1
-    circle(image, 412, 562, 80)
+    draw_circle(image, 412, 562, 80)
   when 2
-    circle(image, 412, 442, 80)
-    circle(image, 412, 682, 80)
+    draw_circle(image, 412, 442, 80)
+    draw_circle(image, 412, 682, 80)
   when 3
-    circle(image, 412, 322, 80)
-    circle(image, 412, 562, 80)
-    circle(image, 412, 802, 80)
+    draw_circle(image, 412, 322, 80)
+    draw_circle(image, 412, 562, 80)
+    draw_circle(image, 412, 802, 80)
   when 4
-    circle(image, 412, 202, 80)
-    circle(image, 412, 442, 80)
-    circle(image, 412, 682, 80)
-    circle(image, 412, 922, 80)
+    draw_circle(image, 412, 202, 80)
+    draw_circle(image, 412, 442, 80)
+    draw_circle(image, 412, 682, 80)
+    draw_circle(image, 412, 922, 80)
   end
 end
 
 def mini_circles(image, count)
   case count
   when 1
-    circle(image, 300, 412, 80)
+    draw_circle(image, 300, 412, 80)
   end
 end
