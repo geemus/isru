@@ -17,14 +17,18 @@ COLORS = %w{
 }
 
 CONTRACTS = %w{
-  500
   111
-  301
   021
+  301
   320
-  040
-  003
   321
+  900
+  060
+  003
+  042
+  602
+  640
+  531
 }
 
 SUITS = %w{
@@ -33,6 +37,7 @@ SUITS = %w{
   hexagon
 }
 
+total = 0
 CONTRACTS.each do |contract|
   text, value = [], 0
   contract.split('').each_with_index do |count, index|
@@ -40,16 +45,19 @@ CONTRACTS.each do |contract|
     text << "#{count} #{COLORS[index]}"
     case COLORS[index]
     when "Black"
-      value += count.to_i * 1.333
+      value += count.to_i(16) * 2   # value
     when "Grey"
-      value += count.to_i * 2.5
+      value += count.to_i(16) * 3   # value
     when "White"
-      value += count.to_i * 4
+      value += count.to_i(16) * 6   # value
     end
   end
   text = text.join (' + ')
   value = value.ceil
+  total += value
   value = value.to_s
+
+  puts "#{contract}*=#{value}"
 
   SUITS.each do |suit|
     name = "#{contract}#{suit[0,1]}=#{value}"
@@ -81,3 +89,6 @@ CONTRACTS.each do |contract|
 end
 
 card_back('Contracts', "#{DIRECTORY}/../assets/contracts/back.png")
+
+puts "CONTRACTS: #{CONTRACTS.length * SUITS.length}"
+puts "AVERAGE: #{total / CONTRACTS.length}"
