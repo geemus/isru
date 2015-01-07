@@ -11,9 +11,9 @@ WIDTH     = 825
 require File.expand_path(File.join(DIRECTORY, 'art'))
 
 COLORS = %w{
-  Black
-  Grey
-  White
+  Carbon
+  Water
+  Ore
 }
 
 CONTRACTS = %w{
@@ -44,11 +44,11 @@ CONTRACTS.each do |contract|
     next if count == "0"
     text << "#{count} #{COLORS[index]}"
     case COLORS[index]
-    when "Black"
+    when "Carbon"
       value += count.to_i(16) * 2   # value
-    when "Grey"
+    when "Water"
       value += count.to_i(16) * 3   # value
-    when "White"
+    when "Ore"
       value += count.to_i(16) * 6   # value
     end
   end
