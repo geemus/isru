@@ -21,14 +21,16 @@ CONTRACTS = %w{
   021
   301
   320
-  321
   900
   060
   003
+  321
+  222
   042
   602
   640
-  531
+  333
+  642
 }
 
 SUITS = %w{
@@ -43,17 +45,18 @@ CONTRACTS.each do |contract|
   contract.split('').each_with_index do |count, index|
     next if count == "0"
     text << "#{count} #{COLORS[index]}"
+    value += 0.3
     case COLORS[index]
     when "Carbon"
-      value += count.to_i(16) * 2   # value
+      value += count.to_i(16) * 1.0   # value
     when "Water"
-      value += count.to_i(16) * 3   # value
+      value += count.to_i(16) * 1.5   # value
     when "Ore"
-      value += count.to_i(16) * 6   # value
+      value += count.to_i(16) * 3.0   # value
     end
   end
   text = text.join (' + ')
-  value = value.ceil
+  value = value.round
   total += value
   value = value.to_s
 
