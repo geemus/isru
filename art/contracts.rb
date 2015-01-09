@@ -21,10 +21,10 @@ CONTRACTS = %w{
   021
   301
   320
-  900
-  060
   003
   321
+  060
+  900
   222
   042
   602
@@ -43,22 +43,23 @@ total = 0
 CONTRACTS.each do |contract|
   text, value = [], 0
   contract.split('').each_with_index do |count, index|
-    next if count == "0"
+    count = count.to_i(16)
+    next if count == 0
     text << "#{count} #{COLORS[index]}"
-    value += 0.3
+    #value += 0.5
+    value += 0.5 * count
     case COLORS[index]
     when "Carbon"
-      value += count.to_i(16) * 1.0   # value
+      value += count * 1.0   # value
     when "Water"
-      value += count.to_i(16) * 1.5   # value
+      value += count * 1.5   # value
     when "Ore"
-      value += count.to_i(16) * 3.0   # value
+      value += count * 3.0   # value
     end
   end
   text = text.join (' + ')
   value = value.round
   total += value
-  value = value.to_s
 
   puts "#{contract}*=#{value}"
 
@@ -73,7 +74,7 @@ CONTRACTS.each do |contract|
       self.pointsize  = 60
       self.rotation   = 90
     end
-    draw.annotate(image, 0,0, PADDING, HEIGHT - PADDING, value) do
+    draw.annotate(image, 0,0, PADDING, HEIGHT - PADDING, value.to_s) do
       shared_text_settings(self)
       self.align      = Magick::RightAlign
       self.pointsize  = 60
@@ -94,4 +95,4 @@ end
 card_back('Contracts', "#{DIRECTORY}/../assets/contracts/back.png")
 
 puts "CONTRACTS: #{CONTRACTS.length * SUITS.length}"
-puts "AVERAGE: #{total / CONTRACTS.length}"
+puts "AVERAGE: #{total.to_f / CONTRACTS.length}"
