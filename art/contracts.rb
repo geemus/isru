@@ -22,21 +22,19 @@ CONTRACTS = %w{
   301
   320
   003
-  321
   060
   900
   222
   042
   602
   640
-  333
-  642
 }
 
 SUITS = %w{
   circle
   diamond
   hexagon
+  octagon
 }
 
 total = 0

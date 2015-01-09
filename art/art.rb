@@ -205,6 +205,25 @@ def hexagon(image)
   hexagon.draw(image)
 end
 
+def octagon(image)
+  octagon = Magick::Draw.new
+  octagon.fill         = "transparent"
+  octagon.stroke       = BASE0
+  octagon.stroke_width = 5
+  # 412, 562
+  # 53 + 54 + 53 = 160
+  # 332-492, 482-642
+  octagon.line(385, 482, 439, 482)
+  octagon.line(439, 482, 492, 535)
+  octagon.line(492, 535, 492, 589)
+  octagon.line(492, 589, 439, 642)
+  octagon.line(439, 642, 385, 642)
+  octagon.line(385, 642, 332, 589)
+  octagon.line(332, 589, 332, 535)
+  octagon.line(332, 535, 385, 482)
+  octagon.draw(image)
+end
+
 def circles(image, count)
   case count
   when 1
